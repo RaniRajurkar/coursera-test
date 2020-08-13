@@ -1,15 +1,236 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>
-    Hello Coursera
-</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Layout</title>
+<style>
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  
+/*    margin-top: 0px;*/
+   
+    
+}
+    
+        .title{
+            
+            text-align: center;
+            font-family:monospace;
+            font-size: 26px; 
+            margin-top: 40px;
+        }
+    .header{
+          background-color: #F08080;
+        width: 110px;text-align: center;
+        height: 25px;
+          font-family:monospace;
+        font-weight: bolder;
+        font-size: 18px;
+      color: black;
+        position: absolute;
+         border: 2px solid black;
+ top: -2px;
+        right: -2px;
+      
+    }
+    div.parent{
+        font-weight: bolder;
+        color: black;
+        font-size: 17px;
+            
+    }
+
+
+h1 {
+  margin-bottom: 15px;
+}
+    #beef{
+        background-color: #A52A2A;
+    }
+    #sushi{
+              background-color: #F0E68C;
+    }
+   
+.parent {
+  border: 2px solid black;
+  background-color: #808080;
+  padding: 24px;
+  width: 90%;
+  height: 150px;
+    
+ margin: 20px;
+/*
+  margin-right: auto;
+  margin-left: auto;
+*/
+  overflow:hidden;
+  font-family:monospace;
+  color: white;
+    position: relative;
+}
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+}
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+/*    border: 1px solid green;*/
+  }
+  .col-lg-1 {
+    width: 8.33%;
+  }
+  .col-lg-2 {
+    width: 16.66%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.33%;
+  }
+  .col-lg-5 {
+    width: 41.66%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.33%;
+  }
+  .col-lg-8 {
+    width: 66.66%;
+  }
+  .col-lg-9 {
+    width: 74.99%;
+  }
+  .col-lg-10 {
+    width: 83.33%;
+  }
+  .col-lg-11 {
+    width: 91.66%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+/*    border: 1px solid green;*/
+  }
+  .col-md-1 {
+    width: 8.33%;
+  }
+  .col-md-2 {
+    width: 16.66%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33%;
+  }
+  .col-md-5 {
+    width: 41.66%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33%;
+  }
+  .col-md-8 {
+    width: 66.66%;
+  }
+  .col-md-9 {
+    width: 74.99%;
+  }
+  .col-md-10 {
+    width: 83.33%;
+  }
+  .col-md-11 {
+    width: 91.66%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+    
+}
+    /********** Large devices only **********/
+@media  (max-width: 767px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+/*    border: 1px solid green;*/
+  }
+  .col-sm-1 {
+    width: 8.33%;
+  }
+  .col-sm-2 {
+    width: 16.66%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.33%;
+  }
+  .col-sm-5 {
+    width: 41.66%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.33%;
+  }
+  .col-sm-8 {
+    width: 66.66%;
+  }
+  .col-sm-9 {
+    width: 74.99%;
+  }
+  .col-sm-10 {
+    width: 83.33%;
+  }
+  .col-sm-11 {
+    width: 91.66%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+
+
+
+</style>
 </head>
 <body>
-    <h1>
-      Edited
-    </h1>
+<header class="title">Our Menu</header>
+
+<div class="row">
+    
+  <div class="col-lg-4 col-md-6 col-sm-12" >             <div class="parent">  <div class="header">Chicken</div>
+     This small site is a result of a hard-working process of one person. Server and domain have been paid with my own funds. All new feature development occasionally happens in the after-work hours only and driven by its owner's desperate passion. 
+             </div></div>
+  <div class="col-lg-4 col-md-6 col-sm-12" > <div class="parent">  <div class="header" id="beef">Beef</div>
+     This small site is a result of a hard-working process of one person. Server and domain have been paid with my own funds. All new feature development occasionally happens in the after-work hours only and driven by its owner's desperate passion. 
+             </div></div>
+  <div class="col-lg-4 col-md-6 col-sm-12" > <div class="parent">  <div class="header" id="sushi">Sushi</div>
+     This small site is a result of a hard-working process of one person. Server and domain have been paid with my own funds. All new feature development occasionally happens in the after-work hours only and driven by its owner's desperate passion. 
+             </div></div></div>
  
+</div>
+
 </body>
 </html>
